@@ -8,4 +8,8 @@ class Constants {
         const val DETAILS_SCREEN = "details_screen"
 
     }
+
+    object Api{
+        const val BASE_URL = "https://api.tvmaze.com/"
+    }
 }
