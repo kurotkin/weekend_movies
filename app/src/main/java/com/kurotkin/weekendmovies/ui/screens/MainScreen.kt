@@ -1,4 +1,4 @@
-package com.kurotkin.weekendmovies.screens
+package com.kurotkin.weekendmovies.ui.screens
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Surface

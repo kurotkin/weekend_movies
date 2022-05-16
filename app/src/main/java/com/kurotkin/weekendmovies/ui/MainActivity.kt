@@ -1,17 +1,11 @@
-package com.kurotkin.weekendmovies
+package com.kurotkin.weekendmovies.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
-import com.kurotkin.weekendmovies.navigation.SetupNavHost
+import com.kurotkin.weekendmovies.ui.navigation.SetupNavHost
 import com.kurotkin.weekendmovies.ui.theme.WeekendMoviesTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,7 +16,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             WeekendMoviesTheme {
                val navController = rememberNavController()
-                SetupNavHost(navController = navController)
+                val viewModel = hiltViewModel<MainViewModel>()
+                SetupNavHost(navController = navController, viewModel = viewModel)
             }
         }
     }

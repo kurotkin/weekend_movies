@@ -1,11 +1,12 @@
-package com.kurotkin.weekendmovies.navigation
+package com.kurotkin.weekendmovies.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.kurotkin.weekendmovies.screens.MainScreen
-import com.kurotkin.weekendmovies.screens.SplashScreen
+import com.kurotkin.weekendmovies.ui.MainViewModel
+import com.kurotkin.weekendmovies.ui.screens.MainScreen
+import com.kurotkin.weekendmovies.ui.screens.SplashScreen
 import com.kurotkin.weekendmovies.utils.Constants
 
 sealed class Screens(val route: String){
@@ -15,7 +16,7 @@ sealed class Screens(val route: String){
 }
 
 @Composable
-fun SetupNavHost(navController: NavHostController) {
+fun SetupNavHost(navController: NavHostController, viewModel: MainViewModel) {
     NavHost(
         navController = navController,
         startDestination = Screens.Splash.route

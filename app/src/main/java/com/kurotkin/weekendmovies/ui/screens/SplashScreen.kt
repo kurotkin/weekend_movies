@@ -1,4 +1,4 @@
-package com.kurotkin.weekendmovies.screens
+package com.kurotkin.weekendmovies.ui.screens
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.kurotkin.weekendmovies.navigation.Screens
+import com.kurotkin.weekendmovies.ui.navigation.Screens
 import com.kurotkin.weekendmovies.ui.theme.WeekendMoviesTheme
 import kotlinx.coroutines.delay
 
